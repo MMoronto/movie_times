@@ -1,28 +1,17 @@
 # MovieTimes
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/movie_times`. To experiment with that code, run `bin/console` for an interactive prompt.
+This Ruby gem provides a Command Line Interface(CLI) to view a list of movies opening soon at theaters nearest to the user's zipcode per search results from the IMDB website.
 
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'movie_times'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
 
     $ gem install movie_times
 
 ## Usage
 
-TODO: Write usage instructions here
+Type the code below and follow the on screen prompts.
+
+    $ movie_times
 
 ## Development
 
