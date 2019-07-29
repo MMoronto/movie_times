@@ -3,15 +3,16 @@ class MovieTimes::CLI
   def call 
     list_movies
     menu
+    goodbye
   end 
   
   def list_movies
-    # here doc
+     # here doc
     puts "Coming Soon to a Theatre Near You:"
-    puts <<-DOC.gsub /^\s*/, ''
-        1. Once Upon a Time in Hollywood - Aug 4th 
-        2. Aladdin - July 31st
-      DOC 
+    #puts <<-DOC.gsub /^\s*/, ''
+    puts "1. Fast & Furious - Hobbs & Shaw - 2019" 
+    puts "2. Dora and the Lost City of Gold - 2019" 
+      #DOC 
   end 
   
   def menu
