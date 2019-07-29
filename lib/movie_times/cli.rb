@@ -3,7 +3,7 @@ class MovieTimes::CLI
   def call 
     list_movies
     menu
-    #goodbye
+    goodbye
   end 
   
   def list_movies
@@ -16,7 +16,6 @@ class MovieTimes::CLI
   end 
   
   def menu
-    
     input = nil 
     while input != "exit"
       puts "Enter the number of the movie you'd like to see or type list to see the movie premiere listings again or type exit"
@@ -28,6 +27,8 @@ class MovieTimes::CLI
         puts "Showtimes & Tickets for movie 2. Dora and the Lost City of Gold - 2019"
       when "list"
         list_movies
+      else 
+        puts "Not sure what you want, type list or exit."
       end 
     end
   end 
