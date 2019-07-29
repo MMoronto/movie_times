@@ -16,15 +16,18 @@ class MovieTimes::CLI
   end 
   
   def menu
-    puts "Enter the number of the movie you'd like to see or type exit"
+    
     input = nil 
     while input != "exit"
+      puts "Enter the number of the movie you'd like to see or type list to see the movie premiere listings again or type exit"
       input = gets.strip.downcase
       case input
       when "1"
         puts "Showtimes & Tickets for movie 1. Fast & Furious - Hobbs & Shaw - 2019"
       when "2"
         puts "Showtimes & Tickets for movie 2. Dora and the Lost City of Gold - 2019"
+      when "list"
+        list_movies
       end 
     end
   end 
