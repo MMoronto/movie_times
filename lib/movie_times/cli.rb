@@ -3,7 +3,7 @@ class MovieTimes::CLI
   def call 
     list_movies
     menu
-    goodbye
+    #goodbye
   end 
   
   def list_movies
@@ -18,6 +18,12 @@ class MovieTimes::CLI
   def menu
     puts "Enter the number of the movie you'd like to see:"
     input = gets.strip
+    case input
+    when "1"
+      puts "Showtimes & Tickets for Fast & Furious - Hobbs & Shaw - 2019"
+    when "2"
+      puts "Showtimes & Tickets for Dora and the Lost City of Gold - 2019"
+    end 
   end 
    
 end 
