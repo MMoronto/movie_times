@@ -12,7 +12,8 @@ class MovieTimes::CLI
     #puts <<-DOC.gsub /^\s*/, ''
     puts "1. Fast & Furious - Hobbs & Shaw - 2019" 
     puts "2. Dora and the Lost City of Gold - 2019" 
-      #DOC 
+    #DOC 
+    @movies = MovieTimes::Movie.release
   end 
   
   def menu
