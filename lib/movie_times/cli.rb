@@ -9,10 +9,6 @@ class MovieTimes::CLI
   def list_movies
      # here doc
     puts "Coming Soon to a Theatre Near You:"
-    #puts <<-DOC.gsub /^\s*/, ''
-    puts "1. Fast & Furious - Hobbs & Shaw - 2019" 
-    puts "2. Dora and the Lost City of Gold - 2019" 
-    #DOC 
     @movies = MovieTimes::Movie.release
   end 
   
