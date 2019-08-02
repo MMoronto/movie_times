@@ -17,12 +17,10 @@ class MovieTimes::CLI
     while input != "exit"
       puts "Enter the number of the movie you'd like to see or type list to see the movie premiere listings again or type exit"
       input = gets.strip.downcase
-      case input
-      when "1"
-        puts "Showtimes & Tickets for movie 1. Fast & Furious - Hobbs & Shaw - 2019"
-      when "2"
-        puts "Showtimes & Tickets for movie 2. Dora and the Lost City of Gold - 2019"
-      when "list"
+      
+      if input.to_i > 0 
+        puts @movies[input.to_i-1]
+      elsif input == "list
         list_movies
       else 
         puts "Not sure what you want, type list or exit."
