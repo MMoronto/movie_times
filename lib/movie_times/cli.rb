@@ -20,9 +20,9 @@ class MovieTimes::CLI
       
       if input.to_i > 0 
         puts @movies[input.to_i-1]
-      elsif input == "list
+      elsif input == "list"
         list_movies
-      else 
+      else
         puts "Not sure what you want, type list or exit."
       end 
     end
