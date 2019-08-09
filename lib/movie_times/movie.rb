@@ -2,10 +2,11 @@ class MovieTimes::Movie
   attr_accessor :title, :duration, :genre, :times_tickets, :releasedate, :availability
   
   def self.release 
-    # I should return a bunch of instances of Movie
-    puts "Movie 1. Fast & Furious - Hobbs & Shaw - 2019" 
-    puts "Movie 2. Dora and the Lost City of Gold - 2019" 
-    
+    # Scrape IMDB and return movie premiere listings based on that data 
+    self.scrape_movies  
+  end 
+  
+  def self.scrape_movies 
     movie_1 = self.new 
     movie_1.title = "Fast & Furious - Hobbs & Shaw"
     movie_1.duration = "111 min"
