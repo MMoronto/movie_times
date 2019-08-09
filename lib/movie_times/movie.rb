@@ -26,8 +26,8 @@ class MovieTimes::Movie
     
     movie = self.new 
     movie.title = doc.search(h4.title).text.strip
-    movie.duration = doc.search().text.strip
-    movie.genre = doc.search().text.strip
+    movie.duration = doc.search(p.datetime).text.strip
+    movie.genre = doc.search(#).text.strip
     movie.times_tickets = doc.search().text.strip
     movie.releasedate = doc.search().text.strip
     movie.availability = true 
