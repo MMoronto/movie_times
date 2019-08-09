@@ -9,6 +9,8 @@ class MovieTimes::Movie
   def self.scrape_movies 
     movies = []
     
+    movies << self.scrape_imdb
+    
     #Go to IMDB, find movies coming soon 
     #extract the properties
     #Instantiate a movie 
@@ -16,6 +18,20 @@ class MovieTimes::Movie
     #repeat for the next movie 
     
     movies 
+  end 
+  
+  def self.scrape_imdb
+    doc = Nokogiri::HTML(open("https://www.imdb.com/movies-coming-soon"))
+    
+    movie = self.new 
+    movie.title = doc.search().text.strip
+    movie.duration = doc.search().text.strip
+    movie.genre = doc.search().text.strip
+    movie.times_tickets = doc.search().text.strip
+    movie.releasedate = doc.search().text.strip
+    movie.availability = true 
+    
+    movie
   end 
   
 end 
