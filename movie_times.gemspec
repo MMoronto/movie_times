@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "Movies coming soon to a theatre near you!!!"
   spec.description   = "Provides details on IMDB movie premiers coming to a theatre near you "
-  spec.homepage      = "http://rubygems.org/gems/movie-times"
+  spec.homepage      = "https://github.com/MMoronto/movie_times"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
