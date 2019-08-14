@@ -25,9 +25,9 @@ class MovieTimes::Movie
         #binding.pry 
     
     movie = self.new 
-    movie.title = doc.search(h4.title).text.strip
+    movie.title = doc.css(div.title).text.strip
     movie.availability = true
-    movie.get_tickets = doc.search().text.strip
+    movie.get_tickets = doc.css(div.action).text.strip
     
     movie
   end 
