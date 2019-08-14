@@ -21,8 +21,8 @@ class MovieTimes::Movie
   end 
   
   def self.scrape_imdb
-    doc = Nokogiri::HTML(open("https://www.imdb.com/movies-coming-soon"))
-    binding.pry 
+    doc = Nokogiri::HTML(open("https://www.imdb.com"))
+        #binding.pry 
     
     movie = self.new 
     movie.title = doc.search(h4.title).text.strip
