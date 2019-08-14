@@ -1,5 +1,5 @@
 class MovieTimes::Movie 
-  attr_accessor :title, :duration, :genre, :times_tickets, :releasedate, :availability
+  attr_accessor :title, :availability, :get_tickets 
   
   def self.release 
     # Scrape IMDB and return movie premiere listings based on that data 
@@ -26,11 +26,8 @@ class MovieTimes::Movie
     
     movie = self.new 
     movie.title = doc.search(h4.title).text.strip
-    movie.duration = doc.search(p.datetime).text.strip
-    movie.genre = doc.search(#).text.strip
-    movie.times_tickets = doc.search().text.strip
-    movie.releasedate = doc.search().text.strip
-    movie.availability = true 
+    movie.availability = true
+    movie.get_tickets = doc.search().text.strip
     
     movie
   end 
