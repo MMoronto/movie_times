@@ -25,9 +25,9 @@ class MovieTimes::Movie
         #binding.pry 
     
     movie = self.new 
-    movie.title = doc.css(div.title).text.strip
+    movie.title = doc.search(div.title).attr("href").strip
     movie.availability = true
-    movie.get_tickets = doc.css(div.action).text.strip
+    movie.get_tickets = doc.css(div.action).attr("href").strip
     
     movie
   end 
