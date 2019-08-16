@@ -11,7 +11,7 @@ class MovieTimes::CLI
     puts "Coming Soon to a Theatre Near You:"
     @movies = MovieTimes::Movie.release
     @movies.each.with_index(1) do |movie, i|
-      puts "#{i}. #{movie.title} - #{movie.duration} - #{movie.genre} - #{movie.times_tickets}"
+      puts "#{i}. #{movie.title} - #{movie.availability} - #{movie.get_tickets}"
     end 
   end 
   
@@ -23,7 +23,7 @@ class MovieTimes::CLI
       
       if input.to_i > 0 
         the_movie = @movies[input.to_i-1]
-        puts "#{the_movie.title} - #{the_movie.duration} - #{the_movie.genre} - #{the_movie.times_tickets}"
+        puts "#{the_movie.title} - #{the_movie.availability} - #{the_movie.get_tickets}"
         puts @movies[input.to_i-1]
       elsif input == "list"
         list_movies
