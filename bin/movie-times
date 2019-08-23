@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 
-#require_relative '../lib/movie_times'
+require_relative '../lib/movie_times'
 
-require "bundler/setup"
-require "movie_times"
+#require "bundler/setup"
+#require "movie_times"
 
 MovieTimes::CLI.new.call
 
