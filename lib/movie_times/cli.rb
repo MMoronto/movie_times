@@ -2,8 +2,7 @@ class MovieTimes::CLI
   
   def call 
     list_movies
-    menu
-    goodbye
+    start
   end 
   
   def list_movies
@@ -15,7 +14,20 @@ class MovieTimes::CLI
       puts ""
   end 
   
-  def menu
+   def print_movie(movie)
+    puts ""
+    puts "-------------- #{movie.title} --------------"
+
+    puts ""
+    puts movie.summary
+    puts ""
+
+    puts "Release date: #{movie.rel_date}"
+    puts ""
+  end
+  
+  def start 
+    list 
     input = nil 
     while input != "exit"
       puts ""
