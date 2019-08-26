@@ -7,30 +7,37 @@ class MovieTimes::CLI
   end 
   
   def list_movies
-     # here doc
+    puts ""
     puts "Coming Soon to a Theatre Near You:"
-    @movies = MovieTimes::Movie.release
-    @movies.each.with_index(1) do |movie, i|
-      puts "#{i}. #{movie.title} - #{movie.availability} - #{movie.get_tickets}"
+    MovieTimes::Movie.all.each.with_index(1) do |movie, i|
+      puts "#{i}. #{movie.title}"
     end 
+      puts ""
   end 
   
   def menu
     input = nil 
     while input != "exit"
-      puts "Enter the number of the movie you'd like to see or type list to see the movie premiere listings again or type exit"
-      input = gets.strip.downcase
-      
-      if input.to_i > 0 
-        the_movie = @movies[input.to_i-1]
-        puts "#{the_movie.title} - #{the_movie.availability} - #{the_movie.get_tickets}"
-        puts @movies[input.to_i-1]
-      elsif input == "list"
-        list_movies
-      else
-        puts "Not sure what you want, type list or exit."
-      end 
+      puts ""
+      puts "What movie would you more information on, by name or number?"
+      puts ""
+      puts "Enter list to see the movies again."
+      puts "Enter exit to end the program."
+      puts ""
+      input = gets.strip
+      if input == "list"
+        list
+      elsif input.to_i == 0
+        if movie = NowPlaying::Movie.find_by_name(input)
+          print_movie(movie)
+        end
+      elsif input.to_i > 0
+        if movie = NowPlaying::Movie.find(input.to_i)
+          print_movie(movie)
+        end
+      end
     end
+    puts "Goodbye!!!"
   end 
   
   def goodbye 
