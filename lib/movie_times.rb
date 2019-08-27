@@ -1,10 +1,10 @@
 require 'open-uri'
-require 'nokogiri'
 require 'pry'
+require 'nokogiri'
 
-require_relative "../movie_times/version"
-require_relative '../movie_times/movie'
-require_relative '../movie_times/cli'
+require "movie_times/version"
+require "movie_times/cli"
+require "movie_times/movie"
 
 module MovieTimes
 end
